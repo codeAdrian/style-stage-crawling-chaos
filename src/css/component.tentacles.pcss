@@ -1,0 +1,84 @@
+@svg-load tentacle url(../assets/tentacle.svg) {
+}
+
+header {
+  position: relative;
+}
+
+header {
+  &:before,
+  &:after {
+    min-height: 710px;
+    background-image: svg-inline(tentacle);
+  }
+
+  &::before {
+    content: "";
+    animation: creepy 5s infinite alternate ease-in-out;
+    position: absolute;
+    top: -300px;
+    left: 110px;
+    background-size: contain;
+    transform: rotate3d(0, 0, 1, 180deg);
+    background-repeat: no-repeat;
+    width: 300px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: 30px;
+    background-size: contain;
+    transform: rotate3d(0, 0, 1, 180deg) scale3d(-1, 1, 1);
+    transform-origin: center;
+    background-repeat: no-repeat;
+    width: 350px;
+    animation: creepy2 6s infinite alternate ease-in-out;
+  }
+}
+
+@keyframes creepy {
+  0% {
+    transform: rotate3d(0, 0, 1, 180deg) translate3d(-10px, -30px, 0);
+  }
+
+  25% {
+    transform: rotate3d(0, 0, 1, 182deg) translate3d(-6px, -50px, 0);
+  }
+
+  50% {
+    transform: rotate3d(0, 0, 1, 183deg) translate3d(-3px, 0, 0);
+  }
+
+  100% {
+    transform: rotate3d(0, 0, 1, 181deg) translate3d(10px, 10px, 0);
+  }
+}
+
+@keyframes creepy2 {
+  0% {
+    transform: rotate3d(0, 0, 1, 180deg) scale3d(-1, 1, 1)
+      translate3d(-13px, -26px, 0);
+  }
+
+  25% {
+    transform: rotate3d(0, 0, 1, 180deg) scale3d(-1, 1, 1)
+      translate3d(-10x, -13px, 0);
+  }
+
+  50% {
+    transform: rotate3d(0, 0, 1, 181deg) scale3d(-1, 1, 1)
+      translate3d(4px, 0px, 0);
+  }
+
+  75% {
+    transform: rotate3d(0, 0, 1, 185deg) scale3d(-1, 1, 1)
+      translate3d(4px, 13px, 0);
+  }
+
+  100% {
+    transform: rotate3d(0, 0, 1, 180deg) scale3d(-1, 1, 1)
+      translate3d(-13px, -26px, 0);
+  }
+}

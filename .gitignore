@@ -1,0 +1,6 @@
+.cache
+dist
+node_modules
+src/index.html
+yarn-error.log
+.DS_Store

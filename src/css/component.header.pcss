@@ -1,0 +1,33 @@
+header {
+  border: 12px double var(--color__muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing__vertical--2) var(--spacing__horizontal--2);
+  max-width: 1366px;
+  max-height: 920px;
+  margin: 0 auto var(--spacing__vertical--2) auto;
+
+  & a {
+    &:not(.link-github) {
+      color: var(--color__tertiary);
+    }
+  }
+
+  & .container {
+    padding-left: 320px;
+  }
+
+  & h2 {
+    max-width: 600px;
+  }
+
+  & h2,
+  & p {
+    padding-bottom: var(--spacing__vertical--n1);
+  }
+}
+
+.skip-link {
+  display: none;
+}
