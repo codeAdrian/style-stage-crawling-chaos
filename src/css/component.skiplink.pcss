@@ -1,0 +1,24 @@
+.skip-link {
+  z-index: 2;
+  position: absolute;
+  background-color: var(--color__muted);
+  color: var(--color__secondary);
+  padding: var(--spacing__vertical--1) var(--spacing__horizontal--1);
+  text-align: center;
+  margin: 0 auto;
+
+  &:not(:focus) {
+    top: auto;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  &:focus {
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 290px;
+  }
+}

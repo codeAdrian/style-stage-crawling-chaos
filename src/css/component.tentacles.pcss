@@ -8,33 +8,48 @@ header {
 header {
   &:before,
   &:after {
-    min-height: 710px;
-    background-image: svg-inline(tentacle);
+    @media (min-width: 630px) {
+      content: "";
+      min-height: 710px;
+      background-image: svg-inline(tentacle);
+    }
   }
 
   &::before {
-    content: "";
     animation: creepy 5s infinite alternate ease-in-out;
     position: absolute;
-    top: -300px;
-    left: 110px;
+    top: -200px;
     background-size: contain;
     transform: rotate3d(0, 0, 1, 180deg);
     background-repeat: no-repeat;
-    width: 300px;
+    right: -80px;
+    width: 200px;
+
+    @media (min-width: 1336px) {
+      width: 300px;
+      right: auto;
+      top: -300px;
+      left: 110px;
+    }
   }
 
   &::after {
     content: "";
     position: absolute;
-    top: -100px;
-    left: 30px;
+    top: -200px;
+    left: -80px;
     background-size: contain;
     transform: rotate3d(0, 0, 1, 180deg) scale3d(-1, 1, 1);
     transform-origin: center;
     background-repeat: no-repeat;
-    width: 350px;
     animation: creepy2 6s infinite alternate ease-in-out;
+    width: 200px;
+
+    @media (min-width: 1336px) {
+      width: 350px;
+      top: -100px;
+      left: 30px;
+    }
   }
 }
 

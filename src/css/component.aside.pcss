@@ -6,14 +6,7 @@ body > aside > .container {
       max-content
     );
   grid-template-rows: auto auto auto auto auto 1fr;
-  border-bottom: 8px double var(--color__muted);
-  padding-bottom: var(--spacing__vertical--2);
   margin-bottom: var(--spacing__vertical--2);
-
-  &:last-child {
-    border-bottom-width: 0;
-    padding-bottom: 0;
-  }
 
   & > * {
     grid-column: 2 / -1;
@@ -66,5 +59,10 @@ body > aside {
       padding-left: var(--spacing__horizontal--1);
       font-size: var(--typography__small);
     }
+  }
+
+  &.profile .container {
+    padding-bottom: var(--spacing__vertical--2);
+    border-bottom: 8px double var(--color__muted);
   }
 }

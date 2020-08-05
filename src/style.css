@@ -3,7 +3,6 @@
 @import "normalize.css";
 
 @import "./css/variables.colors";
-@import "./css/variables.media";
 @import "./css/variables.typography";
 
 @import "./css/calculation.spacing";
@@ -18,3 +17,4 @@
 @import "./css/component.header";
 @import "./css/component.footer";
 @import "./css/component.aside";
+@import "./css/component.skiplink";

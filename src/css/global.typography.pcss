@@ -1,7 +1,11 @@
 html {
-  font-size: var(--typography__fontSize);
+  font-size: var(--typography__fontSize--mobile);
   line-height: var(--typography__lineHeight);
   font-weight: 300;
+
+  @media (min-width: 920px) {
+    font-size: var(--typography__fontSize);
+  }
 }
 
 body {
@@ -23,7 +27,11 @@ h2 {
 }
 
 h1 {
-  font-size: var(--typography__xxlargest);
+  font-size: var(--typography__xlargest);
+
+  @media (min-width: 1336px) {
+    font-size: var(--typography__xxlargest);
+  }
 }
 
 h4 {
@@ -40,8 +48,12 @@ header {
   }
 
   & h2 {
-    font-size: var(--typography__larger);
+    font-size: var(--typography__medium);
     font-family: var(--typography__fontFamily--primary);
+
+    @media (min-width: 1336px) {
+      font-size: var(--typography__larger);
+    }
   }
 }
 

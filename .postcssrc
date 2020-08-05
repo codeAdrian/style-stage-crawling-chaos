@@ -1,16 +1,18 @@
 {
   "plugins": {
     "postcss-import":{},
-    "postcss-import-url": {},
+    "postcss-import-url":{},
+    "postcss-nested":{},
+    "postcss-custom-media":{},
     "postcss-inline-svg":{},
-    "postcss-preset-env": {
-    "browsers": "defaults",
+    "postcss-preset-env":{
+    "browsers": "last 3 versions",
       "autoprefixer": false,
       "features": {
         "nesting-rules": true,
         "custom-media-queries": true,
       },
-      "stage": 3,
-    }
+    },
+    "postcss-combine-media-query":{},
   }
 }

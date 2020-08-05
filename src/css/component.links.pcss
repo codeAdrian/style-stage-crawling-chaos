@@ -59,19 +59,28 @@ main {
   & .link-github {
     display: inline-flex;
     position: relative;
+    padding: 0 var(--spacing__horizontal--1);
 
     & span {
       display: block;
+
+      padding-right: var(--spacing__horizontal--n2);
+      padding-left: var(--spacing__horizontal--1);
+      display: none;
+      padding-right: var(--spacing__horizontal--1);
+      padding-left: var(--spacing__horizontal--1);
       width: calc(
         var(--spacing__horizontal--n1) + var(--spacing__horizontal--n3)
       );
-      padding-right: var(--spacing__horizontal--1);
-      padding-left: var(--spacing__horizontal--1);
       margin-right: var(--spacing__horizontal--n1);
       margin-left: calc(
         (var(--spacing__horizontal--1) * -1) - var(--spacing__horizontal--n1)
       );
       fill: var(--color__secondary);
+
+      @media (min-width: 430px) {
+        display: block;
+      }
 
       &::after {
         content: "";

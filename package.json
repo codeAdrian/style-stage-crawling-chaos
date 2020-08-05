@@ -13,13 +13,17 @@
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-purgecss": "^3.0.0",
     "postcss": "^7.0.32",
+    "postcss-combine-media-query": "^1.0.1",
+    "postcss-custom-media": "^7.0.8",
     "postcss-google-font": "^1.0.0",
     "postcss-import": "^12.0.1",
     "postcss-import-url": "^5.1.0",
     "postcss-inline-svg": "^4.1.0",
+    "postcss-nested": "^4.2.3",
     "postcss-preset-env": "^6.7.0"
   },
   "devDependencies": {
+    "browsers": "^1.0.2",
     "cssnano": "^4.1.10"
   }
 }

@@ -1,12 +1,26 @@
 header {
-  border: 12px double var(--color__muted);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--spacing__vertical--2) var(--spacing__horizontal--2);
-  max-width: 1366px;
-  max-height: 920px;
   margin: 0 auto var(--spacing__vertical--2) auto;
+  max-width: 1366px;
+  text-align: center;
+
+  @media (min-width: 430px) {
+    border: 12px double var(--color__muted);
+    padding: var(--spacing__vertical--1) var(--spacing__horizontal--n1);
+  }
+
+  @media (min-width: 630px) {
+    padding: var(--spacing__vertical--1) var(--spacing__horizontal--2);
+  }
+
+  @media (min-width: 1336px) {
+    text-align: left;
+    max-height: 920px;
+    padding: var(--spacing__vertical--2) var(--spacing__horizontal--1)
+      var(--spacing__vertical--2) var(--spacing__horizontal--2);
+  }
 
   & a {
     &:not(.link-github) {
@@ -15,7 +29,9 @@ header {
   }
 
   & .container {
-    padding-left: 320px;
+    @media (min-width: 1336px) {
+      padding-left: 320px;
+    }
   }
 
   & h2 {
@@ -26,8 +42,4 @@ header {
   & p {
     padding-bottom: var(--spacing__vertical--n1);
   }
-}
-
-.skip-link {
-  display: none;
 }
