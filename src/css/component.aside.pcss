@@ -1,17 +1,44 @@
 body > aside > .container {
-  display: grid;
   grid-gap: 0;
-  grid-template-columns: minmax(min-content, 460px) minmax(
-      min-content,
-      max-content
-    );
   grid-template-rows: auto auto auto auto auto 1fr;
-  margin-bottom: var(--spacing__vertical--2);
+  margin-bottom: var(--spacing__vertical--1);
+
+  &:not(:last-child) {
+    padding-bottom: var(--spacing__vertical--1);
+
+    @media (min-width: 1024px) {
+      padding-bottom: var(--spacing__vertical--2);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    margin-bottom: var(--spacing__vertical--2);
+    display: grid;
+    grid-template-columns: minmax(min-content, 320px) minmax(
+        min-content,
+        max-content
+      );
+  }
+
+  @media (min-width: 1336px) {
+    grid-template-columns: minmax(min-content, 460px) minmax(
+        min-content,
+        max-content
+      );
+  }
 
   & > * {
-    grid-column: 2 / -1;
     align-self: start;
-    margin-left: var(--spacing__horizontal--2);
+
+    @media (min-width: 1024px) {
+      grid-column: 2 / -2;
+      margin-left: var(--spacing__horizontal--1);
+    }
+
+    @media (min-width: 1336px) {
+      grid-column: 2 / -1;
+      margin-left: var(--spacing__horizontal--2);
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -38,19 +65,44 @@ body > aside > .container {
       );
       padding-left: 0;
       grid-column: span 1;
-      grid-row: span 2;
-      position: sticky;
       grid-row-start: 1;
       grid-row-end: 10;
-      top: var(--spacing__vertical--n1);
+      padding-bottom: var(--spacing__vertical--1);
+
+      @media (min-width: 1024px) {
+        position: sticky;
+        grid-row: span 2;
+        padding-bottom: 0;
+        top: var(--spacing__vertical--n1);
+      }
     }
   }
 }
 
 body > aside {
+  @media (min-width: 420px) and (max-width: 1024px) {
+    text-align: center;
+  }
+
   & ul {
     display: block !important;
     margin-bottom: 0;
+
+    & li {
+      padding-left: var(--spacing__horizontal--n2);
+
+      @media (min-width: 420px) and (max-width: 1024px) {
+        padding-left: 0;
+
+        & span > span {
+          padding-left: 0 !important;
+        }
+
+        &::before {
+          display: none;
+        }
+      }
+    }
   }
 
   & .features {

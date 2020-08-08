@@ -41,7 +41,7 @@ h4 {
 header {
   & h1 {
     color: var(--color__primary);
-    text-shadow: 0 0.02em 0 var(--color__primary--hue), 0 0.1em 0 #0f0f0f;
+    text-shadow: 0 0.02em 0 var(--color__secondary), 0 0.07em 0 #000;
     letter-spacing: var(--spacing__horizontal--n5);
     line-height: 1;
     padding-bottom: var(--spacing__vertical--1);
@@ -58,17 +58,15 @@ header {
 }
 
 body > aside {
-  & h4 {
-  }
-
   & h4,
   & h2,
   & h3 {
     &:first-child {
       color: var(--color__primary);
       font-size: var(--typography__xlarge);
+      letter-spacing: 0.02em;
       padding-bottom: 0;
-      text-shadow: 0 0.03em 0 rgba(0, 0, 0, 0), 0 0.1em 0 #0f0f0f;
+      text-shadow: 0 0.03em 0 rgba(0, 0, 0, 0), 0 0.08em 0 #000;
     }
   }
 }
@@ -78,10 +76,11 @@ main {
     & h2,
     & h3 {
       &:first-child {
+        letter-spacing: 0.02em;
         color: var(--color__primary);
         font-size: var(--typography__xlarge);
         padding-bottom: 0;
-        text-shadow: 0 0.03em 0 rgba(0, 0, 0, 0), 0 0.1em 0 #0f0f0f;
+        text-shadow: 0 0.03em 0 rgba(0, 0, 0, 0), 0 0.08em 0 #000;
       }
     }
   }

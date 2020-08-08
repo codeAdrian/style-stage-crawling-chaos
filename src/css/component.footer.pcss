@@ -6,6 +6,11 @@
 
   & a {
     color: var(--color__tertiary);
+
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
   }
 
   & p {
@@ -38,6 +43,23 @@
     padding: var(--spacing__vertical--2) var(--spacing__horizontal--4);
   }
 
+  & li {
+    &::after {
+      @media (min-width: 768px) {
+        content: "|";
+      }
+      width: 0;
+      color: var(--color__secondary);
+      padding: 0 var(--spacing__horizontal--n1);
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
   & ul {
     list-style: none;
     margin: 0;
@@ -54,15 +76,6 @@
 
     & a {
       display: inline-flex;
-
-      &::after {
-        @media (min-width: 768px) {
-          content: "|";
-        }
-        color: var(--color__secondary);
-        padding: 0 var(--spacing__horizontal--n1);
-        display: block;
-      }
     }
   }
 

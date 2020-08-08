@@ -6,12 +6,12 @@
     "postcss-custom-media":{},
     "postcss-inline-svg":{},
     "postcss-preset-env":{
-    "browsers": "last 3 versions",
-      "autoprefixer": false,
-      "features": {
-        "nesting-rules": true,
-        "custom-media-queries": true,
-      },
+      "browsers": "last 3 versions",
+        "autoprefixer": false,
+        "features": {
+          "nesting-rules": true,
+          "custom-media-queries": true,
+        },
     },
     "postcss-combine-media-query":{},
   }

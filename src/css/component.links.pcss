@@ -4,6 +4,12 @@ a {
 
   &:not([class]) {
     color: var(--color__tertiary);
+    position: relative;
+
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -13,9 +19,9 @@ body > aside > .container > a {
   background-clip: padding-box;
   display: inline-flex;
   border-radius: 12px;
-  border: 8px double var(--color__primary);
+  border: 8px double var(--color__cta);
   box-shadow: 0 0.1em 0 rgba(0, 0, 0, 0), 0 0.1em 0.2em 0 #0f0f0f;
-  background-color: var(--color__primary);
+  background-color: var(--color__cta);
   min-height: calc(var(--spacing__vertical--1) + var(--spacing__vertical--n1));
   line-height: 1;
   padding: 0 var(--spacing__horizontal--1);
@@ -28,6 +34,15 @@ body > aside > .container > a {
   align-items: center;
   margin-top: var(--spacing__vertical--1);
   max-width: 290px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+    background-color: var(--color__cta--shadow);
+    border-color: var(--color__cta--shadow);
+  }
 }
 
 header,
@@ -39,9 +54,9 @@ main {
     background-clip: padding-box;
     display: inline-flex;
     border-radius: 12px;
-    border: 8px double var(--color__primary);
+    border: 8px double var(--color__cta);
     box-shadow: 0 0.1em 0 rgba(0, 0, 0, 0), 0 0.1em 0.2em 0 #0f0f0f;
-    background-color: var(--color__primary);
+    background-color: var(--color__cta);
     min-height: calc(
       var(--spacing__vertical--1) + var(--spacing__vertical--n1)
     );
@@ -54,6 +69,15 @@ main {
     grid-area: unset;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      text-decoration: none;
+      background-color: var(--color__cta--shadow);
+      border-color: var(--color__cta--shadow);
+    }
   }
 
   & .link-github {
