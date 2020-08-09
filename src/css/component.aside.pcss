@@ -118,3 +118,31 @@ body > aside {
     border-bottom: 8px double var(--color__muted);
   }
 }
+
+#sponsor-footer {
+  max-width: 1024px;
+  padding-bottom: var(--spacing__vertical--1);
+  margin: 0 auto;
+
+  & span {
+    display: block;
+  }
+
+  @media (min-width: 800px) {
+    text-align: left;
+
+    & > p {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    & span {
+      padding-right: var(--spacing__horizontal--1);
+    }
+
+    & a {
+      margin-top: 0;
+      min-width: 270px;
+    }
+  }
+}
