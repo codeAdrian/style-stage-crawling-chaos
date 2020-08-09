@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "cleanup": "rm -rf .cache dist",
-    "dev": "yarn cleanup && parcel ./src/index.html",
-    "build": "parcel build ./src/index.html"
+    "dev": "NODE_ENV=production && yarn cleanup && parcel ./src/index.html",
+    "build": "NODE_ENV=production && parcel build ./src/index.html"
   },
   "dependencies": {
     "normalize.css": "^8.0.1",

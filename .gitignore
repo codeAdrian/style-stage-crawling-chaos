@@ -1,5 +1,6 @@
 .cache
-dist
+dist/*.html
+dist/*.css.map
 node_modules
 src/index.html
 yarn-error.log
